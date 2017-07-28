@@ -37,11 +37,15 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
-
+  print_statistics(test, SIZE);
 }
 
 void print_statistics(unsigned char arr[], unsigned char arr_length)
 {
+  printf("Max of test array = %i\n", find_minimum(arr, arr_length)); 
+  printf("MIN of test array = %i\n", find_maximum(arr, arr_length));
+  printf("Mean of test array = %f\n", find_mean(arr, arr_length));
+  printf("Median of test array = %f\n", find_median(arr, arr_length));
 }
 
 void print_array(unsigned char arr[], unsigned char arr_length)
@@ -55,11 +59,11 @@ void print_array(unsigned char arr[], unsigned char arr_length)
 
 float find_median(unsigned char arr[], unsigned char arr_length)
 {
-	sort_array(arr, arr_length);
-	if(arr_length % 2 == 0)
-		return (float)(((float)arr[arr_length/2] + (float)arr[arr_length/2 - 1])/2.0);
-	else
-		return (float)arr[arr_length/2];
+  sort_array(arr, arr_length);
+  if(arr_length % 2 == 0)
+    return (float)(((float)arr[arr_length/2] + (float)arr[arr_length/2 - 1])/2.0);
+  else
+    return (float)arr[arr_length/2];
 }
 
 float find_mean(unsigned char arr[], unsigned char arr_length)
