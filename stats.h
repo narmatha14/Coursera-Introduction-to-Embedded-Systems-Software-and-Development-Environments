@@ -61,7 +61,7 @@ void print_array(unsigned char arr[], unsigned int arr_length);
  *
  * @return the calculated median value based on the given array data and length
  */
-float find_median(unsigned char arr[], unsigned int arr_length);
+unsigned char find_median(unsigned char arr[], unsigned int arr_length);
 
 /**
  * @brief Given an array of data and a length, returns the mean
@@ -75,7 +75,7 @@ float find_median(unsigned char arr[], unsigned int arr_length);
  *
  * @return the average value of the given array arr with length arr_length
  */
-float find_mean(unsigned char arr[], unsigned int arr_length);
+unsigned char find_mean(unsigned char arr[], unsigned int arr_length);
 
 /**
  * @brief Given an array of data and a length, returns the maximum
