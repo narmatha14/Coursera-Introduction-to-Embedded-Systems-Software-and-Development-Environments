@@ -24,14 +24,15 @@
 /**
  * @brief A function that prints the statistics of an array including minimum, maximum, mean, and median.
  *
- * This function will pass the input array to some statisitcs functions and print the returned values 
- * from these functions
+ * This function will pass the input array to some statisitcs functions and print the returned 
+ * values from these functions
  *
- * @param unsigned char arr[] the array which its statistics to be printed 
+ * @param arr the array which its statistics to be printed 
+ * @param arr_length the statisitcs will be caculated based on this length 
  *
  * @return None
  */
-void print_statistics(unsigned char arr[]);
+void print_statistics(unsigned char arr[], unsigned char arr_length);
 
 /**
  * @brief Given an array of data and a length, prints the array to the screen.
@@ -44,7 +45,7 @@ void print_statistics(unsigned char arr[]);
  *
  * @return None
  */
-void print_array(unsigned char arr[], unsigned int arr_length);
+void print_array(unsigned char arr[], unsigned char arr_length);
 
 /**
  * @brief Given an array of data and a length, returns the median value
@@ -60,7 +61,7 @@ void print_array(unsigned char arr[], unsigned int arr_length);
  *
  * @return the calculated median value based on the given array data and length
  */
-unsigned char find_median(unsigned char arr[], unsigned char arr_length);
+float find_median(unsigned char arr[], unsigned char arr_length);
 
 /**
  * @brief Given an array of data and a length, returns the mean
@@ -74,7 +75,7 @@ unsigned char find_median(unsigned char arr[], unsigned char arr_length);
  *
  * @return the average value of the given array arr with length arr_length
  */
-int find_mean(unsigned char arr[], unsigned int arr_length);
+float find_mean(unsigned char arr[], unsigned char arr_length);
 
 /**
  * @brief Given an array of data and a length, returns the maximum
@@ -87,7 +88,7 @@ int find_mean(unsigned char arr[], unsigned int arr_length);
  *
  * @return the maximum element value of the given array elements. 
  */
-int find_maximum(unsigned char arr[], unsigned int arr_length); 
+unsigned char find_maximum(unsigned char arr[], unsigned char arr_length); 
 
 /**
  * @brief Given an array of data and a length, returns the minimumGiven an array of data and a length, returns the minimum
@@ -100,12 +101,13 @@ int find_maximum(unsigned char arr[], unsigned int arr_length);
  *
  * @return the minimum element value of the given array elements.
  */
-int find_minimum(unsigned char arr[], unsigned int arr_length);
+unsigned char find_minimum(unsigned char arr[], unsigned char arr_length);
 
 /**
  * @brief Given an array of data and a length, sorts the array from largest to smallest. 
  *
- * The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value.
+ * The zeroth Element should be the largest value, and the last element (n-1) should be the 
+ * smallest value.
  * The array will be sorted using two nested loops approach.
  *
  * @param arr the target array to be sorted.
@@ -113,7 +115,7 @@ int find_minimum(unsigned char arr[], unsigned int arr_length);
  *
  * @return None
  */
-void sort_array(unsigned char arr[], unsigned int arr_length);
+void sort_array(unsigned char arr[], unsigned char arr_length);
 
 
 #endif /* __STATS_H__ */

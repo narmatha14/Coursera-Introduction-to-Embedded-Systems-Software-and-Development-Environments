@@ -40,27 +40,81 @@ void main() {
 
 }
 
-void print_statistics(unsigned char arr[])
-{
-}
-void print_array(unsigned char arr[], unsigned int arr_length)
-{
-}
-unsigned char find_median(unsigned char arr[], unsigned char arr_length)
-{
-}
-int find_mean(unsigned char arr[], unsigned int arr_length)
-{
-}
-int find_maximum(unsigned char arr[], unsigned int arr_length)
-{
-}
-int find_minimum(unsigned char arr[], unsigned int arr_length)
-{
-}
-void sort_array(unsigned char arr[], unsigned int arr_length)
+void print_statistics(unsigned char arr[], unsigned char arr_length)
 {
 }
 
+void print_array(unsigned char arr[], unsigned char arr_length)
+{
+  unsigned char idx; 
+  for(idx = 0; idx < arr_length; idx++)
+  {
+    printf("%i ", arr[idx]);
+  }
+}
 
+float find_median(unsigned char arr[], unsigned char arr_length)
+{
+	sort_array(arr, arr_length);
+	if(arr_length % 2 == 0)
+		return (float)(((float)arr[arr_length/2] + (float)arr[arr_length/2 - 1])/2.0);
+	else
+		return (float)arr[arr_length/2];
+}
+
+float find_mean(unsigned char arr[], unsigned char arr_length)
+{
+  unsigned char idx; 
+  unsigned int sum = 0; 
+  float average = 0.00; 
+  for(idx = 0; idx < arr_length; idx++)
+  {
+    sum += arr[idx];
+  }
+  average = (float)sum/(float)arr_length; 
+  return average; 
+}
+
+unsigned char find_maximum(unsigned char arr[], unsigned char arr_length)
+{
+  unsigned char idx; 
+  unsigned char maximum = arr[0]; 
+  for(idx = 0; idx < arr_length; idx++)
+  {
+    if(arr[idx] > maximum)
+       maximum = arr[idx]; 
+  }
+  return maximum; 
+}
+
+unsigned char find_minimum(unsigned char arr[], unsigned char arr_length)
+{
+  unsigned char idx; 
+  unsigned char minimum = arr[0]; 
+  for(idx = 0; idx < arr_length; idx++)
+  {
+    if(arr[idx] < minimum)
+       minimum = arr[idx]; 
+  }
+  return minimum;
+}
+
+void sort_array(unsigned char arr[], unsigned char arr_length)
+{
+  unsigned char outter_idx;
+  unsigned char inner_idx;
+  unsigned char temp;
+  for(outter_idx = 0; outter_idx < arr_length - 1; outter_idx++)
+  {
+    for(inner_idx = outter_idx; inner_idx < arr_length - 1; inner_idx++)
+      {
+        if(arr[inner_idx] < arr[inner_idx + 1])
+        {
+          temp = arr[inner_idx + 1];
+          arr[inner_idx + 1] = arr[inner_idx];
+          arr[inner_idx] = temp;
+        } 
+      } 
+  }
+}
 
