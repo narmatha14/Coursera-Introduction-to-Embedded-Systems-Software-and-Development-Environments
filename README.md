@@ -1,1 +1,3 @@
-/* Add Author and Project Details here */
+/* Mohamed A. Hassan Baidaq 
+and this is my progress in coursera introduction to embedded system development course 
+*/

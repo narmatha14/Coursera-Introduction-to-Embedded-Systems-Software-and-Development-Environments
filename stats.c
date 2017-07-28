@@ -10,12 +10,12 @@
  *****************************************************************************/
 /**
  * @file <stats.c> 
- * @brief <Add Brief Description Here >
- *
- * <Add Extended Description Here>
+ * @brief this file contains the actual implementations of eight functions
+ * to get the statistics of given array elements and its length
+ * 
  *
  * @author Mohamed Baidaq
-/ * @date 7/23/2017 
+/ * @date 7/28/2017 
  *
  */
 
@@ -40,4 +40,27 @@ void main() {
 
 }
 
-/* Add other Implementation File Code Here */
+void print_statistics(unsigned char arr[])
+{
+}
+void print_array(unsigned char arr[], unsigned int arr_length)
+{
+}
+unsigned char find_median(unsigned char arr[], unsigned char arr_length)
+{
+}
+int find_mean(unsigned char arr[], unsigned int arr_length)
+{
+}
+int find_maximum(unsigned char arr[], unsigned int arr_length)
+{
+}
+int find_minimum(unsigned char arr[], unsigned int arr_length)
+{
+}
+void sort_array(unsigned char arr[], unsigned int arr_length)
+{
+}
+
+
+
