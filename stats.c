@@ -40,7 +40,7 @@ void main() {
   print_statistics(test, SIZE);
 }
 
-void print_statistics(unsigned char arr[], unsigned char arr_length)
+void print_statistics(unsigned char arr[], unsigned int arr_length)
 {
   printf("Max of test array = %i\n", find_minimum(arr, arr_length)); 
   printf("MIN of test array = %i\n", find_maximum(arr, arr_length));
@@ -48,7 +48,7 @@ void print_statistics(unsigned char arr[], unsigned char arr_length)
   printf("Median of test array = %f\n", find_median(arr, arr_length));
 }
 
-void print_array(unsigned char arr[], unsigned char arr_length)
+void print_array(unsigned char arr[], unsigned int arr_length)
 {
   unsigned char idx; 
   for(idx = 0; idx < arr_length; idx++)
@@ -57,7 +57,7 @@ void print_array(unsigned char arr[], unsigned char arr_length)
   }
 }
 
-float find_median(unsigned char arr[], unsigned char arr_length)
+float find_median(unsigned char arr[], unsigned int arr_length)
 {
   sort_array(arr, arr_length);
   if(arr_length % 2 == 0)
@@ -66,7 +66,7 @@ float find_median(unsigned char arr[], unsigned char arr_length)
     return (float)arr[arr_length/2];
 }
 
-float find_mean(unsigned char arr[], unsigned char arr_length)
+float find_mean(unsigned char arr[], unsigned int arr_length)
 {
   unsigned char idx; 
   unsigned int sum = 0; 
@@ -79,7 +79,7 @@ float find_mean(unsigned char arr[], unsigned char arr_length)
   return average; 
 }
 
-unsigned char find_maximum(unsigned char arr[], unsigned char arr_length)
+unsigned char find_maximum(unsigned char arr[], unsigned int arr_length)
 {
   unsigned char idx; 
   unsigned char maximum = arr[0]; 
@@ -91,7 +91,7 @@ unsigned char find_maximum(unsigned char arr[], unsigned char arr_length)
   return maximum; 
 }
 
-unsigned char find_minimum(unsigned char arr[], unsigned char arr_length)
+unsigned char find_minimum(unsigned char arr[], unsigned int arr_length)
 {
   unsigned char idx; 
   unsigned char minimum = arr[0]; 
@@ -103,7 +103,7 @@ unsigned char find_minimum(unsigned char arr[], unsigned char arr_length)
   return minimum;
 }
 
-void sort_array(unsigned char arr[], unsigned char arr_length)
+void sort_array(unsigned char arr[], unsigned int arr_length)
 {
   unsigned char outter_idx;
   unsigned char inner_idx;
